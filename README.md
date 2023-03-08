@@ -12,6 +12,6 @@ npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
 
-//0x7A9d2305038b8DffD6a1C0DCCE57e565ef24426a
+//0xEa3f5686Cf055933FF3a8DC743ff33F4402a5A37
 
-//verified at: https://goerli.etherscan.io/address/0x7A9d2305038b8DffD6a1C0DCCE57e565ef24426a#code
+//verified at: https://goerli.etherscan.io/address/0xEa3f5686Cf055933FF3a8DC743ff33F4402a5A37#code

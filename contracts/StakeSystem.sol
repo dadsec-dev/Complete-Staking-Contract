@@ -11,16 +11,14 @@ contract StakeSystem is ERC20{
         }
 
         mapping(address => bool) internal tokenExist;
-        address[] internal StakeHolders;
+
+        address[] public StakeHolders;
 
         mapping(address => bool) internal userExist;
-        address[] internal StakeTokens;
+        address[] public StakeTokens;
 
         //map tokenContract to tokenstakers
         mapping(address => address[]) public  tokenStakers;
-
-
-
 
 
         //staking details
@@ -58,6 +56,21 @@ contract StakeSystem is ERC20{
             MyStakeDetail.stakeAmount += _amount;
             MyStakeDetail.lastTime = block.timestamp;
         }
+
+        function getStakeHolders() external view returns(address[] memory ){
+            return StakeTokens;
+        }
+        function getStakersByTokens(address _tokenContractAddress) external view returns (address[] memory) {
+            return tokenStakers[_tokenContractAddress];
+        }
+
+        
+        function getStakeTokens() external view returns(address[] memory ){
+            return StakeHolders;
+        }
+
+        
+
 
 
         //contract returns 20% of what you staked per hour
